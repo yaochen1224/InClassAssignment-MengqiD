@@ -48,7 +48,7 @@
         android:background="#c9d6e4"
         android:hint="  Please enter student's name here"
         android:padding="5dp"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textSize="14dp" />
 
     <TextView
@@ -70,7 +70,7 @@
         android:background="#c9d6e4"
         android:hint="  Please enter student's uni"
         android:padding="5dp"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textSize="14dp" />
 
     <TextView
@@ -184,7 +184,8 @@
             android:layout_marginRight="16dp"
             android:layout_marginTop="40dp"
             android:background="#3b6aa0"
-            android:text="Submit"/>
+            android:text="Submit"
+            android:textColor="@android:color/white"/>
 
         <Button
             android:layout_width="0dp"
@@ -194,7 +195,8 @@
             android:layout_marginRight="16dp"
             android:layout_marginTop="40dp"
             android:background="#3b6aa0"
-            android:text="Records"/>
+            android:text="Records"
+            android:textColor="@android:color/white"/>
     </LinearLayout>
 
 </LinearLayout>
