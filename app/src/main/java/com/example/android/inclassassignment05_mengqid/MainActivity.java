@@ -8,13 +8,16 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
+import static android.R.attr.start;
 
 public class MainActivity extends AppCompatActivity {
+
+    ArrayList<Student> students = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void save(View view)
         {
-            Intent intent = new Intent(this, ResultActivity.class);
-
             EditText name = (EditText) findViewById(R.id.name);
             String studentName = name.getText().toString();
 
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
             RadioButton other = (RadioButton) findViewById(R.id.other);
             boolean isOther = other.isChecked();
+
             String gender;
 
             if (isFemale) {
@@ -51,18 +53,20 @@ public class MainActivity extends AppCompatActivity {
                 gender = "other";
             }
 
-            boolean graduateStatus=false;
+            String graduateStatus;
             RadioButton graduate = (RadioButton) findViewById(R.id.graduate);
             if (graduate.isChecked()) {
-                graduateStatus = true;
+                graduateStatus = "Graduated";
+            }
+            else
+            {
+                graduateStatus = "Not Graduated";
             }
 
 
-            //Build a com.example.android.inclassassignment05_mengqid.Student ArrayList
-            ArrayList<String> students = new ArrayList<>();
+            //Build a ArrayList
             Student newStudent = new Student(studentName,studentUni,gender,graduateStatus);
-            students.add(studentName);
-            intent.putStringArrayListExtra("Name List", students);
+            students.add(newStudent);
 
             // Clear the data
             studentName="";
@@ -71,34 +75,18 @@ public class MainActivity extends AppCompatActivity {
             studentUni="";
             uni.setText(studentUni);
 
-            female.setSelected(false);
-            male.setSelected(false);
-            other.setSelected(false);
-            graduate.setSelected(false);
-            RadioButton notGraduate = (RadioButton)findViewById(R.id.not_graduate);
-            notGraduate.setSelected(false);
-
-            //Put the arraylist in the intent
-            intent.putExtra("Student Object",students);
+            Toast.makeText(this,"Record is saved!", Toast.LENGTH_SHORT).show();
 
         }
 
-    public void results(View view)
+    public void results (View view)
     {
-        Intent intent = getIntent();
-
-        ArrayList<String> name = intent.getStringArrayListExtra("Name List");
-        Student s = (Student) intent.getSerializableExtra("Student Object");
-
-        TextView a = (TextView) findViewById(R.id.arraylist);
-        a.setText(name.toString());
-
-        TextView o = (TextView) findViewById(R.id.student);
-        o.setText(s.toString());
-
+        //Put the arraylist in the intent
+        Intent intent = new Intent(this, ResultActivity.class);
+        intent.putExtra("Student Records",students);
+        students = new ArrayList<>();
+        startActivity(intent);
     }
-
-
 
 
 

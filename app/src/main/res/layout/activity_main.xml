@@ -12,10 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#3b6aa0"
+        android:paddingBottom="5dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:paddingTop="5dp"
-        android:paddingBottom="5dp"
         android:src="@drawable/title" />
 
     <TextView
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:text="Welcome to the student information system. Please enter the information below:"
         android:textColor="@android:color/white"
         android:textSize="18dp"
@@ -75,137 +75,126 @@
         android:textColor="@android:color/black"
         android:textSize="14dp" />
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="10dp"
-        android:text="Gender:"
-        android:textColor="#3b6aa0"
-        android:textSize="16dp" />
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
 
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#c9d6e4"
             android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp">
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:text="Gender:"
+            android:textColor="#3b6aa0"
+            android:textSize="16dp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#c9d6e4">
 
             <RadioButton
                 android:id="@+id/female"
-                android:layout_weight="1"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
                 android:text="Female" />
 
             <RadioButton
                 android:id="@+id/male"
-                android:layout_weight="1"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:text="Male" />
 
             <RadioButton
                 android:id="@+id/other"
-                android:layout_weight="1"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:text="Other" />
+        </RadioGroup>
 
-        </LinearLayout>
-    </RadioGroup>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="10dp"
-        android:text="Graduate Status"
-        android:textColor="#3b6aa0"
-        android:textSize="16dp" />
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Graduate: "
+            android:textColor="#3b6aa0"
+            android:textSize="16dp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="#c9d6e4"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp">
+            android:layout_marginRight="16dp"
+            >
 
             <RadioButton
                 android:id="@+id/graduate"
-                android:layout_weight="1"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
                 android:text="Graduated" />
 
             <RadioButton
                 android:id="@+id/not_graduate"
-                android:layout_weight="1"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Not Graduated" />
-
-        </LinearLayout>
-    </RadioGroup>
+                android:layout_weight="1"
+                android:text="Not Yet" />
+        </RadioGroup>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginTop="35dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="40dp"
             android:background="#3b6aa0"
-            android:text="Submit"
             android:onClick="save"
-            android:textColor="@android:color/white"/>
+            android:text="Submit"
+            android:textColor="@android:color/white" />
 
         <Button
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="40dp"
+            android:layout_weight="1"
             android:background="#3b6aa0"
-            android:text="Records"
             android:onClick="results"
-            android:textColor="@android:color/white"/>
+            android:text="Records"
+            android:textColor="@android:color/white" />
     </LinearLayout>
-
 </LinearLayout>

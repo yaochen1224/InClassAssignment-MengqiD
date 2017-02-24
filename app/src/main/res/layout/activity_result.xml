@@ -8,7 +8,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#96bae4"
     android:orientation="vertical"
     tools:context="com.example.android.inclassassignment05_mengqid.ResultActivity">
 
@@ -20,20 +19,28 @@
         android:textStyle="bold"
         android:gravity="center_horizontal"
         android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-        android:textColor="@android:color/white"/>
+        android:paddingBottom="20dp" />
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_weight="1"
+    android:background="#3b6aa0"
+    android:layout_height="80dp"
+    >
 
     <TextView
-        android:scrollbars=""
+        android:id="@+id/result_view"
         android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:layout_height="0dp"
-        android:background="#ebf4fe"
+        android:layout_height="match_parent"
+        android:background="#3b6aa0"
+        android:textColor="@android:color/white"
         android:text="Results"
         android:textSize="14dp"
         android:paddingTop="10dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"/>
+
+</ScrollView>
 
     <Button
         android:layout_width="match_parent"
@@ -41,6 +48,7 @@
         android:layout_marginTop="10dp"
         android:background="#3b6aa0"
         android:text="Back"
+        android:onClick="back"
         android:textColor="@android:color/white"
         />
 
