@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -60,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
             ArrayList<String> students = new ArrayList<>();
             Student newStudent = new Student(studentName,studentUni,gender,graduateStatus);
             students.add(studentName);
+            intent.putStringArrayListExtra("Name List", students);
 
             // Clear the data
             studentName="";
@@ -79,6 +82,21 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("Student Object",students);
 
         }
+
+    public void results(View view)
+    {
+        Intent intent = getIntent();
+
+        ArrayList<String> name = intent.getStringArrayListExtra("Name List");
+        Student s = (Student) intent.getSerializableExtra("Student Object");
+
+        TextView a = (TextView) findViewById(R.id.arraylist);
+        a.setText(name.toString());
+
+        TextView o = (TextView) findViewById(R.id.student);
+        o.setText(s.toString());
+
+    }
 
 
 
