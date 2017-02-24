@@ -57,9 +57,9 @@ public class MainActivity extends AppCompatActivity {
 
 
             //Build a com.example.android.inclassassignment05_mengqid.Student ArrayList
-            ArrayList<Student> students = new ArrayList<Student>();
+            ArrayList<String> students = new ArrayList<>();
             Student newStudent = new Student(studentName,studentUni,gender,graduateStatus);
-            students.add(newStudent);
+            students.add(studentName);
 
             // Clear the data
             studentName="";
@@ -79,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("Student Object",students);
 
         }
+
+
 
 
 
