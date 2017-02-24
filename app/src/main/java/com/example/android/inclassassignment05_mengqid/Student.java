@@ -1,3 +1,5 @@
+package com.example.android.inclassassignment05_mengqid;
+
 /**
  * Created by Maureen_Ding on 2/23/17.
  */
