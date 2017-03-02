@@ -47,8 +47,10 @@
         android:layout_marginRight="16dp"
         android:layout_marginTop="10dp"
         android:background="#c9d6e4"
-        android:hint="  Please enter student's name here"
-        android:padding="5dp"
+        android:hint="Please enter student's name here"
+        android:paddingLeft="13dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
         android:textColor="@android:color/black"
         android:textSize="14dp" />
 
@@ -70,8 +72,10 @@
         android:layout_marginRight="16dp"
         android:layout_marginTop="10dp"
         android:background="#c9d6e4"
-        android:hint="  Please enter student's uni"
-        android:padding="5dp"
+        android:hint="Please enter student's uni"
+        android:paddingLeft="13dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
         android:textColor="@android:color/black"
         android:textSize="14dp" />
 
@@ -104,7 +108,8 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="10dp"
-                android:text="Female" />
+                android:text="Female"
+                android:onClick="genderSelect"/>
 
             <RadioButton
                 android:id="@+id/male"
@@ -114,7 +119,8 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="10dp"
-                android:text="Male" />
+                android:text="Male"
+                android:onClick="genderSelect"/>
 
             <RadioButton
                 android:id="@+id/other"
@@ -124,7 +130,8 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="10dp"
-                android:text="Other" />
+                android:text="Other"
+                android:onClick="genderSelect"/>
         </RadioGroup>
 
         <TextView
@@ -153,7 +160,8 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:text="Graduated" />
+                android:text="Graduated"
+                android:onClick="graduateCheck"/>
 
             <RadioButton
                 android:id="@+id/not_graduate"
@@ -164,7 +172,8 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:text="Not Yet" />
+                android:text="Not Yet"
+                android:onClick="graduateCheck"/>
         </RadioGroup>
     </LinearLayout>
 
